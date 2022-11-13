@@ -1,8 +1,8 @@
 class Varasto:
-    def __init__(self, tilavuus, alku_saldo = 0) -> None: 
+    def __init__(self, tilavuus, alku_saldo = 0) -> None:
         self.tilavuus = int(max(0.0, tilavuus))
         self.saldo = int(min(max(0.0, alku_saldo), tilavuus))
-        
+
     def paljonko_mahtuu(self):
         return self.tilavuus - self.saldo
 
@@ -28,4 +28,3 @@ class Varasto:
 
     def __str__(self):
         return f"saldo = {self.saldo}, vielä tilaa {self.paljonko_mahtuu()}"
-    
